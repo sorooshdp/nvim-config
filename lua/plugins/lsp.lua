@@ -21,6 +21,7 @@ return {
           "html",         -- HTML
           "cssls",        -- CSS
           "jsonls",       -- JSON
+          "rust_analyzer", -- Rust
         },
         automatic_installation = true,
       })
@@ -86,6 +87,16 @@ return {
 
       -- CSS
       lspconfig.cssls.setup({ capabilities = capabilities })
+
+      -- Rust
+      lspconfig.rust_analyzer.setup({
+        capabilities = capabilities,
+        settings = {
+          ["rust-analyzer"] = {
+            check = { command = "clippy" }, -- Run clippy for lint diagnostics
+          },
+        },
+      })
 
       -- Global LSP keybindings
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })

@@ -14,6 +14,7 @@ return {
         "json",
         "lua",
         "markdown",
+        "rust",
       },
       highlight = { enable = true },
       indent = { enable = true },
