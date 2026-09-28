@@ -1,5 +1,3 @@
--- ~/.config/nvim/lua/plugins/formatter.lua
-
 return {
   "stevearc/conform.nvim",
   config = function()

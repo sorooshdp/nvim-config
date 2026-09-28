@@ -1,5 +1,3 @@
--- ~/.config/nvim/init.lua (Windows: ~\AppData\Local\nvim\init.lua)
-
 -- Basic settings
 vim.g.mapleader = " "  -- Space as leader key
 vim.opt.number = true  -- Show line numbers
@@ -20,6 +18,14 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "100"
+vim.opt.guifont = "iosevka:h12"
 
 -- Load plugin manager
 require("config.lazy")
+
+if vim.g.neovide then
+  vim.g.neovide_opacity = 0.85  
+  vim.g.neovide_window_blurbehind = 20
+  vim.g.neovide_floating_blur_amount_x = 2.0
+  vim.g.neovide_floating_blur_amount_y = 2.0
+end

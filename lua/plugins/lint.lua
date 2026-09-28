@@ -1,5 +1,3 @@
--- ~/.config/nvim/lua/plugins/lint.lua
-
 return {
   "mfussenegger/nvim-lint",
   config = function()

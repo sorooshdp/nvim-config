@@ -1,5 +1,3 @@
--- ~/.config/nvim/lua/plugins/theme.lua
-
 return {
   "folke/tokyonight.nvim",
   lazy = false,
@@ -7,7 +5,7 @@ return {
   config = function()
     require("tokyonight").setup({
       style = "night",  -- Options: storm, night, moon, day
-      transparent = false,
+      transparent = true,
     })
     vim.cmd([[colorscheme tokyonight]])
   end,
